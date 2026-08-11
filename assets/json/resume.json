@@ -1,0 +1,18 @@
+{
+  "basics": {
+    "name": "WEIYANG HUANG",
+    "label": "Incoming ECE MS student at the University of Washington",
+    "email": "wyh27@uw.edu",
+    "location": "Seattle, WA",
+    "url": "https://github.com/Weiyang-Huang"
+  },
+  "education": [
+    {
+      "studyType": "Bachelor in Electrical Engineering",
+      "institution": "Wuhan Textile University",
+      "startDate": "2022-09",
+      "endDate": "2026-06",
+      "area": "GPA 3.89/4.00"
+    }
+  ]
+}

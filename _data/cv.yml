@@ -1,0 +1,18 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: WEIYANG HUANG
+    - name: Location
+      value: Seattle, WA
+    - name: Email
+      value: weiyangh27@gmail.com; wyh27@uw.edu
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Bachelor in Electrical Engineering
+      institution: Wuhan Textile University
+      year: 2022.09 - 2026.06
+      description:
+        - GPA 3.89/4.00

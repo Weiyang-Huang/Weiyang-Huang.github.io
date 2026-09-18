@@ -40,12 +40,12 @@ latest_posts:
   <h3>Research Interests</h3>
   <div class="interest-list">
     <article class="interest-item">
-      <h4>Grounded Multimodal Scene Intelligence</h4>
-      <p>I am interested in multimodal systems that understand dynamic scenes through vision, audio, and 3D structure, grounding their reasoning in spatial-temporal evidence rather than static visual or language priors.</p>
+      <h4>Structured Multimodal &amp; Spatial Reasoning</h4>
+      <p>I am interested in multimodal systems that represent visual scenes compositionally and reason over objects, attributes, and relations. I hope to study how structured visual and 3D representations can support reliable spatial reasoning across images, video, and dynamic environments.</p>
     </article>
     <article class="interest-item">
-      <h4>Memory-Centric Action and Motion Understanding</h4>
-      <p>I hope to explore how tracking, memory, and embodied perception can help models reason about human motion, object interactions, and future actions in changing environments.</p>
+      <h4>Diagnostic Evaluation &amp; Evidence Grounding</h4>
+      <p>I am interested in understanding whether multimodal models rely on the visual evidence that actually supports their answers. I hope to develop controlled and counterfactual evaluations that reveal spatial reasoning failures, language shortcuts, and sensitivity to relevant relations.</p>
     </article>
   </div>
 </section>

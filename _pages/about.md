@@ -41,11 +41,11 @@ latest_posts:
   <div class="interest-list">
     <article class="interest-item">
       <h4>Structured Multimodal &amp; Spatial Reasoning</h4>
-      <p>I am interested in multimodal systems that represent visual scenes compositionally and reason over objects, attributes, and relations. I hope to study how structured visual and 3D representations can support reliable spatial reasoning across images, video, and dynamic environments.</p>
+      <p>I am interested in multimodal systems that build structured representations of scenes and reason over objects, attributes, and relations. I hope to study how object-centric and spatial representations can support reliable reasoning across images, video, 3D environments, and other sensory modalities.</p>
     </article>
     <article class="interest-item">
       <h4>Diagnostic Evaluation &amp; Evidence Grounding</h4>
-      <p>I am interested in understanding whether multimodal models rely on the visual evidence that actually supports their answers. I hope to develop controlled and counterfactual evaluations that reveal spatial reasoning failures, language shortcuts, and sensitivity to relevant relations.</p>
+      <p>I am interested in understanding whether multimodal models actually rely on the visual, spatial, and cross-modal evidence that supports their predictions. I hope to develop controlled and counterfactual evaluations that reveal failures in grounding, spatial reasoning, and evidence use, while distinguishing sensitivity to relevant changes from robustness to irrelevant ones.</p>
     </article>
   </div>
 </section>

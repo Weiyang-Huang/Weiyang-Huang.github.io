@@ -1,0 +1,11 @@
+{% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}
+  <div class="visitor-map" aria-label="Website visitor map">
+    <div class="visitor-map-inner">
+      <script
+        type="text/javascript"
+        id="mapmyvisitors"
+        src="https://mapmyvisitors.com/map.js?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff&amp;w=a"
+      ></script>
+    </div>
+  </div>
+{% endif %}

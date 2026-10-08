@@ -84,6 +84,10 @@ layout: default
       </div>
     {% endif %}
 
+    {% if page.url == '/' %}
+      {% include visitor_map.liquid %}
+    {% endif %}
+
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}

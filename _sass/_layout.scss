@@ -398,11 +398,11 @@ body.homepage {
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #5f907f;
+      color: var(--brand-text-gold);
       display: inline-block;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid rgba(95, 144, 127, 0.85);
+      border-right: 2px solid rgba(118, 86, 0, 0.85);
       width: 100%;
       max-width: max-content;
       animation:
@@ -416,7 +416,7 @@ body.homepage {
       line-height: 1.35;
       font-family: var(--brand-display-font);
       font-weight: 700;
-      color: #315d4d;
+      color: var(--brand-text-gold);
     }
 
     .hero-lead {
@@ -483,7 +483,7 @@ body.homepage {
       background: rgba(255, 255, 255, 0.78);
       font-size: 0.8rem;
       font-weight: 600;
-      color: #4c7262;
+      color: var(--brand-text-gold);
       animation: tag-float 3s ease-in-out infinite;
     }
 
@@ -577,7 +577,7 @@ body.homepage {
   .research-interest h3 {
     margin: 0 0 0.82rem;
     font-size: 1.1rem;
-    color: #3d6e5e;
+    color: var(--brand-text-gold);
     font-family: var(--brand-display-font);
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -611,7 +611,7 @@ body.homepage {
     margin: 0 0 0.45rem;
     font-size: 1.04rem;
     line-height: 1.42;
-    color: #3b6859;
+    color: var(--brand-text-gold);
     font-family: var(--brand-display-font);
     font-weight: 700;
     display: flex;
@@ -777,7 +777,7 @@ body.homepage {
 
     .contact-link {
       border: 1px solid rgba(75, 46, 131, 0.34);
-      color: #406e5d;
+      color: var(--brand-text-gold);
       background-color: rgba(255, 255, 255, 0.75);
     }
 
@@ -805,7 +805,7 @@ body.homepage {
     font-family: var(--brand-display-font);
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: #3c6959;
+    color: var(--brand-text-gold);
   }
 
   .section-heading--plain {
@@ -829,7 +829,7 @@ body.homepage {
 
   // Link style consistency for homepage
   a:not(.btn):not(.cv-btn):not(.contact-link) {
-    color: #5d947f;
+    color: var(--brand-text-gold);
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     transition:
@@ -839,8 +839,8 @@ body.homepage {
   }
 
   a:not(.btn):not(.cv-btn):not(.contact-link):hover {
-    color: #a6c39c;
-    text-decoration-color: rgba(166, 195, 156, 0.65);
+    color: var(--brand-text-gold);
+    text-decoration-color: var(--brand-text-gold-hover);
     text-underline-offset: 4px;
   }
 
@@ -1428,7 +1428,7 @@ html[data-theme="dark"] {
   .misc-family-member h2 {
     margin: 0 0 0.7rem;
     font-size: 1.1rem;
-    color: #315d4d;
+    color: var(--brand-text-gold);
     display: flex;
     align-items: center;
     gap: 0.45rem;

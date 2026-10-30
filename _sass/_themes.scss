@@ -35,6 +35,8 @@
   --brand-sky: #{$brand-sky};
   --brand-amber: #{$brand-amber};
   --brand-gold: #{$brand-gold};
+  --brand-text-gold: #765600;
+  --brand-text-gold-hover: #624800;
   --brand-border: rgba(75, 46, 131, 0.16);
   --brand-surface: rgba(255, 255, 255, 0.78);
   --brand-surface-strong: rgba(255, 255, 255, 0.9);
@@ -117,6 +119,8 @@ html[data-theme="dark"] {
   --brand-sky: #{$brand-sky};
   --brand-amber: #{$brand-amber};
   --brand-gold: #{$brand-gold};
+  --brand-text-gold: #ffd966;
+  --brand-text-gold-hover: #fff0bc;
   --brand-border: rgba(183, 165, 210, 0.22);
   --brand-surface: rgba(16, 26, 30, 0.68);
   --brand-surface-strong: rgba(16, 26, 30, 0.82);

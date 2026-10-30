@@ -245,21 +245,22 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  border-bottom: 1px solid rgba(255, 217, 102, 0.34);
+  background-color: #4b2e83;
+  opacity: 1;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
+  background-color: #4b2e83;
+  border: 1px solid rgba(255, 217, 102, 0.34);
 
   a:not(.active) {
-    color: var(--global-text-color);
+    color: #ffd966;
   }
 
   a:hover {
-    color: var(--global-hover-color);
+    color: #fff0bc;
+    background-color: #5a3998;
   }
 
   .dropdown-divider {
@@ -268,11 +269,11 @@ ul.task-list input[type="checkbox"] {
 }
 
 .dropdown-item {
-  color: var(--global-text-color);
+  color: #ffd966;
 
   &:hover {
-    color: var(--global-hover-color);
-    background-color: var(--global-bg-color);
+    color: #fff0bc;
+    background-color: #5a3998;
   }
 }
 
@@ -284,24 +285,24 @@ ul.task-list input[type="checkbox"] {
   }
 
   .navbar-brand {
-    color: var(--global-text-color);
+    color: #ffd966;
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: #ffd966;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: #fff0bc;
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
+    color: #ffd966;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: #fff0bc;
     }
   }
 
@@ -348,7 +349,7 @@ ul.task-list input[type="checkbox"] {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--global-text-color);
+    background-color: #ffd966;
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
@@ -388,10 +389,10 @@ ul.task-list input[type="checkbox"] {
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
+  color: #ffd966;
 
   &:hover {
-    color: var(--global-hover-color);
+    color: #fff0bc;
   }
 }
 

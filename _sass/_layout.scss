@@ -35,8 +35,8 @@ body.sticky-bottom-footer {
 // Homepage navbar alignment
 body.homepage {
   .navbar {
-    border-bottom: 1px solid rgba(75, 46, 131, 0.2);
-    background: rgba(244, 251, 247, 0.9);
+    border-bottom: 1px solid rgba(255, 217, 102, 0.34);
+    background: #4b2e83;
     backdrop-filter: blur(6px);
     transition:
       background-color 0.25s ease,
@@ -45,30 +45,30 @@ body.homepage {
   }
 
   .navbar:hover {
-    background: rgba(248, 252, 249, 0.96);
-    box-shadow: 0 6px 18px rgba(45, 82, 68, 0.08);
+    background: #5a3998;
+    box-shadow: 0 6px 18px rgba(32, 20, 54, 0.18);
   }
 
   .navbar.navbar-light {
     .navbar-brand {
-      color: #3f6f5d;
+      color: #ffd966;
       font-weight: 700;
     }
 
     .navbar-nav .nav-item .nav-link {
-      color: #4d7565;
+      color: #ffd966;
       transition:
         color 0.2s ease,
         transform 0.2s ease;
     }
 
     .navbar-nav .nav-item .nav-link:hover {
-      color: #4b2e83;
+      color: #fff0bc;
       transform: translateY(-1px);
     }
 
     .navbar-nav .nav-item.active > .nav-link {
-      color: #4b2e83;
+      color: #ffd966;
       font-weight: 700;
     }
   }
@@ -1459,22 +1459,22 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] body.homepage {
   .navbar {
-    border-bottom: 1px solid rgba(106, 179, 201, 0.24);
-    background: rgba(18, 29, 34, 0.88);
+    border-bottom: 1px solid rgba(255, 217, 102, 0.34);
+    background: #4b2e83;
   }
 
   .navbar.navbar-light {
     .navbar-brand {
-      color: #d0edf8;
+      color: #ffd966;
     }
 
     .navbar-nav .nav-item .nav-link {
-      color: #9fc9d8;
+      color: #ffd966;
     }
 
     .navbar-nav .nav-item .nav-link:hover,
     .navbar-nav .nav-item.active > .nav-link {
-      color: #76c9e6;
+      color: #fff0bc;
     }
   }
 }

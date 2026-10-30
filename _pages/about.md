@@ -26,11 +26,11 @@ latest_posts:
 <section class="home-hero">
   <p class="hero-kicker">WEIYANG HUANG · 黄薇洋</p>
   <p class="hero-lead">
-    I am an incoming ECE MS student at the University of Washington.
+    I am an ECE MS student at the University of Washington. I work closely with Ph.D. student [Ziqi Gao](https://uwgzq.github.io/) at [UW CSE RAIVN Lab](https://raivn.cs.washington.edu/).
   </p>
   <div class="hero-meta-row">
     <div class="hero-tags">
-      <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Incoming ECE MS @ UW</span>
+      <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> ECE MS @ UW</span>
       <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Seattle, WA</span>
     </div>
   </div>

@@ -26,7 +26,7 @@ latest_posts:
 <section class="home-hero">
   <p class="hero-kicker">WEIYANG HUANG · 黄薇洋</p>
   <p class="hero-lead">
-    I am an ECE MS student at the University of Washington. I work closely with Ph.D. student [Ziqi Gao](https://uwgzq.github.io/) at [UW CSE RAIVN Lab](https://raivn.cs.washington.edu/).
+    I am an ECE MS student at the University of Washington. I work closely with Ph.D. student <a href="https://uwgzq.github.io/" target="_blank" rel="noopener noreferrer">Ziqi Gao</a> at <a href="https://raivn.cs.washington.edu/" target="_blank" rel="noopener noreferrer">UW CSE RAIVN Lab</a>.
   </p>
   <div class="hero-meta-row">
     <div class="hero-tags">

@@ -7,7 +7,7 @@ first_name: WEIYANG
 middle_name:
 last_name: HUANG
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Incoming ECE MS student at the University of Washington.
+  ECE MS student at the University of Washington, working closely with Ph.D. student Ziqi Gao at the UW CSE RAIVN Lab.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

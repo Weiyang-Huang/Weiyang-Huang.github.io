@@ -240,6 +240,7 @@ body.homepage {
   article > .clearfix > .home-hero {
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 0;
   }
 
   article > .clearfix > :not(.home-hero) {
@@ -1569,6 +1570,7 @@ html[data-theme="dark"] body.homepage {
 
     .home-hero {
       min-height: auto;
+      margin-bottom: 1.25rem;
       padding: 1.05rem 1.1rem;
     }
 

@@ -288,9 +288,9 @@ body.homepage {
 
   .profile {
     margin-left: 1.3rem;
-    width: clamp(150px, 16vw, 205px);
-    max-width: 22%;
-    min-width: 150px;
+    width: clamp(220px, 22vw, 310px);
+    max-width: 32%;
+    min-width: 220px;
     padding: 0.45rem 0.45rem 0.24rem;
     border: none;
     border-radius: 18px;
@@ -1499,8 +1499,8 @@ html[data-theme="dark"] body.homepage {
     .profile.float-right,
     .profile.float-left {
       float: none !important;
-      width: min(180px, 48vw);
-      max-width: 180px;
+      width: min(240px, 64vw);
+      max-width: 240px;
       margin: 0 auto 1.15rem !important;
     }
 

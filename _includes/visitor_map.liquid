@@ -1,11 +1,14 @@
 {% if site.mapmyvisitors.enabled and site.mapmyvisitors.widget_id %}
-  <div class="visitor-map" aria-label="Website visitor globe">
+  <div class="visitor-map" aria-label="Website visitor map">
     <div class="visitor-map-inner">
-      <script
-        type="text/javascript"
-        id="mmvst_globe"
-        src="https://mapmyvisitors.com/globe.js?d={{ site.mapmyvisitors.widget_id }}"
-      ></script>
+      <a href="https://mapmyvisitors.com/web/1c8qq" title="Visit tracker">
+        <img
+          src="https://mapmyvisitors.com/map.png?d={{ site.mapmyvisitors.widget_id }}&amp;cl=ffffff"
+          alt="Website visitor locations"
+          loading="eager"
+          style="display: block; width: 100%; height: auto;"
+        >
+      </a>
     </div>
   </div>
 {% endif %}

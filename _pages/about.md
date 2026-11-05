@@ -2,6 +2,7 @@
 layout: about
 title: About
 permalink: /
+subtitle: 黄薇洋 · M.S. in Electrical &amp; Computer Engineering, University of Washington
 
 profile:
   align: right
@@ -24,7 +25,7 @@ latest_posts:
 ---
 
 <section class="home-hero">
-  <p class="hero-kicker">WEIYANG HUANG · 黄薇洋</p>
+  <p class="hero-kicker">About Me</p>
   <p class="hero-lead">
     I am an ECE MS student at the University of Washington. I work closely with Ph.D. student <a href="https://uwgzq.github.io/" target="_blank" rel="noopener noreferrer">Ziqi Gao</a> at <a href="https://raivn.cs.washington.edu/" target="_blank" rel="noopener noreferrer">UW CSE RAIVN Lab</a>.
   </p>
@@ -37,7 +38,7 @@ latest_posts:
 </section>
 
 <section class="research-interest">
-  <h3>Research Interests</h3>
+  <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Research Interests</h3>
   <div class="interest-list">
     <article class="interest-item">
       <h4>Structured Multimodal &amp; Spatial Reasoning</h4>
@@ -51,7 +52,8 @@ latest_posts:
 </section>
 
 <p class="opportunity-callout">
-  I am currently seeking research internship opportunities and would be happy to connect with researchers and teams working on related topics.
+  <span class="status-dot" aria-hidden="true"></span>
+  <span>I am currently seeking research internship opportunities and would be happy to connect with researchers and teams working on related topics.</span>
 </p>
 
 <div class="contact-strip">

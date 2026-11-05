@@ -275,9 +275,7 @@ body.homepage .post-home .home-hero {
   flex-direction: column;
   border-radius: 20px;
   border: 1px solid var(--r-border);
-  background:
-    radial-gradient(120% 140% at 100% 0%, var(--r-purple-soft) 0%, transparent 55%),
-    var(--r-surface);
+  background: radial-gradient(120% 140% at 100% 0%, var(--r-purple-soft) 0%, transparent 55%), var(--r-surface);
   box-shadow: var(--r-shadow);
   animation: none;
 }

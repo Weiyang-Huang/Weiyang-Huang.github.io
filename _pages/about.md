@@ -1,7 +1,8 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /classic/
+sitemap: false
 subtitle: 黄薇洋 · M.S. in Electrical &amp; Computer Engineering, University of Washington
 
 profile:

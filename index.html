@@ -127,7 +127,7 @@ em{font-style:italic}
 
 /* ───────── hero ───────── */
 .hero{position:relative;padding:104px 0 0;overflow:hidden}
-.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-bg{position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
 .hero-bg .grid{position:absolute;inset:0;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:56px 56px;background-position:-1px -1px;
@@ -228,9 +228,29 @@ em{font-style:italic}
 .hero-meta .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
 .hero-meta .v{font-size:14px}
 
-/* lane + walking cat + marquee */
-.lane{position:relative;height:52px;overflow-x:clip}
-.walker{position:absolute;left:0;bottom:-1px;width:78px;animation:cross 36s linear infinite;animation-delay:-9s}
+/* meadow: grass, flowers, floating notes + strolling cat (replaces the keyword band) */
+.meadow{position:relative;height:114px;overflow-x:clip;border-bottom:1px solid var(--line)}
+.meadow::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20px;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(var(--line-2) 1px,transparent 1.3px);background-size:13px 7px}
+.meadow svg.layer{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.m-back{z-index:1}.m-front{z-index:3}
+.meadow .df{stroke-width:1.5}
+.meadow .thin2{stroke-width:1.5}
+.ground{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+.tuft path{fill:none;stroke-linecap:round;stroke-width:1.6}
+.m-back .tuft path{stroke:var(--ink-3);opacity:.6}
+.m-front .tuft path{stroke:var(--ink)}
+.tuft,.flower{transform-box:fill-box;transform-origin:50% 100%;animation:sway var(--t,3.2s) ease-in-out infinite alternate;animation-delay:var(--dl,0s)}
+@keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.flower{pointer-events:auto;cursor:pointer}
+.flower.boop{animation:boop .7s var(--ease)}
+@keyframes boop{0%{transform:none}30%{transform:rotate(-12deg) scale(1.12,.9)}60%{transform:rotate(8deg) scale(.96,1.06)}100%{transform:none}}
+.mdot{fill:#fff;opacity:.9}
+.note{position:absolute;height:20px;pointer-events:none;z-index:4;color:var(--c,var(--violet));animation:floatNote 3.4s ease-out forwards}
+.note svg{display:block;width:100%;height:100%;overflow:visible}
+.note use{fill:currentColor;stroke:currentColor}
+@keyframes floatNote{0%{opacity:0;transform:translate(0,6px) scale(.5)}15%{opacity:1}65%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),-56px) rotate(var(--rot)) scale(1)}}
+.walker{position:absolute;left:0;bottom:21px;width:78px;z-index:2;animation:cross 36s linear infinite;animation-delay:-9s}
 .walker .leg{animation:step .46s ease-in-out infinite alternate}
 .walker .l2,.walker .l3{animation-direction:alternate-reverse}
 .walker .wbody{animation:bob .23s ease-in-out infinite alternate}
@@ -238,13 +258,6 @@ em{font-style:italic}
 @keyframes cross{from{transform:translateX(-100px)}to{transform:translateX(calc(100vw + 10px))}}
 @keyframes step{from{transform:rotate(17deg)}to{transform:rotate(-17deg)}}
 @keyframes bob{to{transform:translateY(-1.4px)}}
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding:11px 0;background:color-mix(in srgb,var(--card) 50%,transparent)}
-.track{display:flex;width:max-content;animation:scroll 50s linear infinite}
-.marquee:hover .track{animation-play-state:paused}
-.track span{font-family:var(--serif);font-weight:460;font-size:clamp(19px,2vw,26px);line-height:1.2;white-space:nowrap;padding-right:.7em}
-.track span:nth-child(even){font-style:italic;color:var(--ink-3)}
-.track i{font-style:normal;color:var(--violet);font-size:.6em;vertical-align:.25em;padding-right:.7em}
-@keyframes scroll{to{transform:translateX(-50%)}}
 
 /* ───────── sections ───────── */
 .section{padding:clamp(64px,7.5vw,104px) 0}
@@ -499,7 +512,7 @@ em{font-style:italic}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .js .name .ch{transform:none}
-  .track,.seek::before{animation:none}
+  .seek::before{animation:none}
   .walker{animation:none;left:40%}
 }
 </style>
@@ -515,6 +528,8 @@ em{font-style:italic}
       <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <symbol id="paw" viewBox="0 0 20 20"><ellipse cx="10" cy="13.4" rx="4.6" ry="3.8"/><ellipse cx="4.3" cy="8.2" rx="1.8" ry="2.2"/><ellipse cx="7.9" cy="4.6" rx="1.8" ry="2.3"/><ellipse cx="12.1" cy="4.6" rx="1.8" ry="2.3"/><ellipse cx="15.7" cy="8.2" rx="1.8" ry="2.2"/></symbol>
+    <symbol id="note1" viewBox="0 0 16 22"><ellipse cx="5.5" cy="17.5" rx="4.4" ry="3.3" transform="rotate(-22 5.5 17.5)"/><path d="M9.4 16.6V2.5c2.6.8 5.2 2.6 5 6.8" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="note2" viewBox="0 0 22 22"><ellipse cx="4.8" cy="18" rx="3.8" ry="2.9" transform="rotate(-22 4.8 18)"/><ellipse cx="16.3" cy="16" rx="3.8" ry="2.9" transform="rotate(-22 16.3 16)"/><path d="M8.2 17.2V4.6M19.7 15.2V2.6" fill="none" stroke-width="1.8" stroke-linecap="round"/><path d="M8.2 4.6L19.7 2.6V5.6L8.2 7.6Z" stroke="none"/></symbol>
   </defs>
 </svg>
 <div class="progress" id="progress" aria-hidden="true"></div>
@@ -612,9 +627,10 @@ em{font-style:italic}
   </div>
 </section>
 
-<!-- doodle: a cat strolling along the line -->
-<div class="lane" aria-hidden="true">
-  <div class="walker doodle">
+<!-- doodle meadow: swaying grass & flowers, floating notes, and a strolling cat -->
+<div class="meadow" id="meadow" aria-hidden="true">
+  <svg class="layer m-back" id="mBack"></svg>
+  <div class="walker doodle" id="walker">
     <svg viewBox="0 0 92 58"><g filter="url(#boil)">
       <path class="dl tail-w" d="M22 29 C12 27 7 19 9 11 C10 7 13 5 16 6"/>
       <path class="dl leg l1" style="transform-origin:28px 34px" d="M28 34 L27 56"/>
@@ -632,14 +648,7 @@ em{font-style:italic}
       </g>
     </g></svg>
   </div>
-</div>
-
-<!-- ═════════ MARQUEE ═════════ -->
-<div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>objects</span><i>✦</i><span>attributes</span><i>✦</i><span>relations</span><i>✦</i><span>spatial reasoning</span><i>✦</i><span>evidence grounding</span><i>✦</i><span>counterfactuals</span><i>✦</i><span>video</span><i>✦</i><span>3D environments</span><i>✦</i>
-    <span>objects</span><i>✦</i><span>attributes</span><i>✦</i><span>relations</span><i>✦</i><span>spatial reasoning</span><i>✦</i><span>evidence grounding</span><i>✦</i><span>counterfactuals</span><i>✦</i><span>video</span><i>✦</i><span>3D environments</span><i>✦</i>
-  </div>
+  <svg class="layer m-front" id="mFront"></svg>
 </div>
 
 <!-- ═════════ RESEARCH ═════════ -->
@@ -988,7 +997,7 @@ em{font-style:italic}
     addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; ring.classList.add('on'); }, { passive: true });
     document.addEventListener('pointerleave', () => ring.classList.remove('on'));
     document.addEventListener('pointerover', e => {
-      ring.classList.toggle('big', !!e.target.closest('a, button, .g-node, .sitter'));
+      ring.classList.toggle('big', !!e.target.closest('a, button, .g-node, .sitter, .flower'));
       ring.classList.toggle('hid', !!e.target.closest('.paper'));
     });
     (function loop() {
@@ -1264,6 +1273,105 @@ em{font-style:italic}
     });
     const end = () => { if (!drag) return; drag.g.classList.remove('drag'); drag = null; target = 0; focus(null); };
     svg.addEventListener('pointerup', end); svg.addEventListener('pointercancel', end);
+  })();
+
+  /* ── meadow: grass, flowers, floating notes ── */
+  (() => {
+    const m = $('#meadow'); if (!m) return;
+    const back = $('#mBack'), front = $('#mFront'), walker = $('#walker');
+    const NS = 'http://www.w3.org/2000/svg';
+    const COLORS = ['#E8798F', '#6A47DB', '#E3A63B', '#4C8DDB'];
+    let flowers = [], GY = 0, visible = false, live = 0;
+    const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.append(e); return e; };
+    const rng = s => () => ((s = (s * 16807) % 2147483647) / 2147483647);
+    const f1 = v => v.toFixed(1);
+    const swayVars = (g, r) => { g.style.setProperty('--dl', f1(-r() * 3) + 's'); g.style.setProperty('--t', f1(2.6 + r() * 1.6) + 's'); };
+
+    function tuft(parent, x, s, r) {
+      const o = el('g', { transform: `translate(${f1(x)} ${GY + 1})` }, parent);
+      const g = el('g', { class: 'tuft' }, o); swayVars(g, r);
+      const a = (8 + r() * 6) * s;
+      el('path', { d: `M0 0q${f1(-2 * s)} ${f1(-a * .5)} ${f1(-5 * s)} ${f1(-a)}M0 0q${f1(.5 * s)} ${f1(-a * .6)} ${f1(s)} ${f1(-a - 5 * s)}M0 0q${f1(2.5 * s)} ${f1(-a * .45)} ${f1(6 * s)} ${f1(-a + 2 * s)}` }, g);
+    }
+    function flower(x, r) {
+      const k = r(), kind = k < .12 ? 'mush' : k < .5 ? 'daisy' : k < .78 ? 'tulip' : 'bud';
+      const c = COLORS[Math.floor(r() * COLORS.length)];
+      const h = kind === 'mush' ? 10 : 22 + r() * 16;
+      const sc = 1.12 + r() * .3;
+      const o = el('g', { transform: `translate(${f1(x)} ${GY}) scale(${sc.toFixed(2)})` }, front);
+      const g = el('g', { class: 'flower' }, o); swayVars(g, r);
+      el('rect', { x: -11, y: f1(-h - 12), width: 22, height: f1(h + 12), fill: 'transparent' }, g);
+      if (kind === 'mush') {
+        el('path', { class: 'df', d: 'M-4 -8L-3.5 0L3.5 0L4 -8Z' }, g);
+        el('path', { class: 'df', d: 'M-10 -8C-10 -19 10 -19 10 -8Z', style: `fill:${c}` }, g);
+        [[-4, -12, 1.6], [3, -14, 1.3], [5.6, -10.4, 1.1]].forEach(([cx, cy, rr]) => el('circle', { class: 'mdot', cx, cy, r: rr }, g));
+      } else {
+        const b = (r() - .5) * 6, side = r() < .5 ? -1 : 1;
+        el('path', { class: 'dl thin2', d: `M0 0C${f1(b)} ${f1(-h * .4)} ${f1(-b)} ${f1(-h * .7)} 0 ${f1(-h)}` }, g);
+        el('path', { class: 'df', d: `M0 ${f1(-h * .3)}q${side * 8} -1 ${side * 10} -8q${-side * 8} 0 ${-side * 10} 8Z` }, g);
+        if (kind === 'daisy') {
+          const pf = r() < .5 ? 'var(--bg)' : c;
+          for (let i = 0; i < 6; i++) el('ellipse', { class: 'df', cx: 0, cy: f1(-h - 5.2), rx: 2.8, ry: 4.6, transform: `rotate(${i * 60} 0 ${f1(-h)})`, style: `fill:${pf}` }, g);
+          el('circle', { class: 'df', cx: 0, cy: f1(-h), r: 3, style: `fill:${pf === c ? '#F2C14E' : c}` }, g);
+        } else if (kind === 'tulip') {
+          const y = -h;
+          el('path', { class: 'df', style: `fill:${c}`, d: `M-6 ${f1(y + 3)}C-7 ${f1(y - 6)} -4 ${f1(y - 10)} -3.5 ${f1(y - 10)}L0 ${f1(y - 6)}L3.5 ${f1(y - 10)}C4 ${f1(y - 10)} 7 ${f1(y - 6)} 6 ${f1(y + 3)}C5 ${f1(y + 7)} -5 ${f1(y + 7)} -6 ${f1(y + 3)}Z` }, g);
+        } else {
+          el('circle', { class: 'df', cx: 0, cy: f1(-h - 2), r: 4.2, style: `fill:${c}` }, g);
+          el('path', { class: 'dl thin2', d: `M-3 ${f1(-h + 1)}q3 3 6 0` }, g);
+        }
+      }
+      const f = { g, x, top: (kind === 'mush' ? 20 : h + 10) * sc, c, last: 0 };
+      g.addEventListener('pointerenter', () => boop(f, true));
+      g.addEventListener('animationend', e => { if (e.animationName === 'boop') g.classList.remove('boop'); });
+      flowers.push(f);
+    }
+    function build() {
+      const W = m.clientWidth, H = m.clientHeight; GY = H - 22;
+      [back, front].forEach(sv => { sv.setAttribute('viewBox', `0 0 ${W} ${H}`); sv.textContent = ''; });
+      flowers = [];
+      const r = rng(11);
+      let d = `M-10 ${GY}`;
+      for (let x = -10; x < W + 40; x += 36) d += `Q${x + 18} ${f1(GY + r() * 3 - 1.5)} ${x + 36} ${f1(GY + r() * 1.6 - .8)}`;
+      el('path', { class: 'ground', d }, front);
+      for (let x = 4; x < W; x += 14 + r() * 14) tuft(back, x, .7 + r() * .5, r);
+      for (let x = 10; x < W; x += 30 + r() * 46) tuft(front, x, .9 + r() * .5, r);
+      const gap = W < 640 ? [55, 75] : [80, 120];
+      for (let x = 30 + r() * 40; x < W - 20; x += gap[0] + r() * gap[1]) flower(x, r);
+    }
+    function note(x, y, c) {
+      if (reduce || live > 10) return;
+      const two = Math.random() < .35, n = document.createElement('span');
+      n.className = 'note';
+      n.innerHTML = `<svg viewBox="0 0 ${two ? 22 : 16} 22"><use href="#${two ? 'note2' : 'note1'}"/></svg>`;
+      n.style.cssText = `left:${f1(x - 8)}px;top:${f1(y - 20)}px;width:${two ? 20 : 15}px;--c:${c};--dx:${Math.round(Math.random() * 36 - 18)}px;--rot:${Math.round(Math.random() * 40 - 20)}deg`;
+      live++; n.addEventListener('animationend', () => { n.remove(); live--; }, { once: true });
+      m.append(n);
+    }
+    function boop(f, force) {
+      const now = performance.now();
+      if (now - f.last < (force ? 400 : 2500)) return;
+      f.last = now;
+      f.g.classList.remove('boop'); void f.g.getBoundingClientRect(); f.g.classList.add('boop');
+      note(f.x, GY - f.top, f.c);
+    }
+    // the strolling cat brushes past flowers → they bounce and sing
+    setInterval(() => {
+      if (!visible || reduce) return;
+      const mr = m.getBoundingClientRect(), wr = walker.getBoundingClientRect();
+      const cx = wr.left - mr.left + wr.width * .78;
+      flowers.forEach(f => { if (Math.abs(f.x - cx) < 9) boop(f); });
+    }, 120);
+    // the occasional stray note
+    setInterval(() => {
+      if (!visible || reduce || !flowers.length || document.hidden) return;
+      const f = flowers[Math.floor(Math.random() * flowers.length)];
+      note(f.x, GY - f.top, f.c);
+    }, 2600);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(m);
+    let lastW = m.clientWidth;
+    build();
+    new ResizeObserver(() => { if (m.clientWidth !== lastW) { lastW = m.clientWidth; build(); } }).observe(m);
   })();
 
   /* ── photo stacks ── */

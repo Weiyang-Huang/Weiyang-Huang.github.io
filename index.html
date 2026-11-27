@@ -444,45 +444,23 @@ em{font-style:italic}
 .paper-hint{position:absolute;left:14px;bottom:10px;margin:0;font-family:var(--mono);font-size:10.5px;color:#8b8596;pointer-events:none;transition:opacity .4s}
 .paper-hint.off{opacity:0}
 
-/* contact */
-.contact{padding:clamp(48px,6vw,80px) 0 0;position:relative;overflow:hidden}
-.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(24px,4vw,56px);align-items:end}
-.contact .sec-num{font-size:10.5px}
-.mega{font-family:var(--serif);font-weight:560;font-size:clamp(34px,4.4vw,60px);line-height:1;letter-spacing:-.035em;margin:10px 0 14px}
-.mega em{color:var(--accent)}
-.contact-grid p{color:var(--ink-2);font-size:14px;line-height:1.6;margin:0;max-width:32em}
-.mails{border-top:1px solid var(--line)}
-.mail{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
-.mail a{font-family:var(--serif);font-weight:440;font-size:clamp(16px,1.5vw,19px);line-height:1.15;letter-spacing:-.01em;word-break:break-all;
+/* hero emails */
+.hero-mails{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:20px}
+.hm{display:flex;align-items:center;gap:10px}
+.hm .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.hm a{font-family:var(--serif);font-weight:440;font-size:clamp(15px,1.2vw,17px);letter-spacing:-.01em;
   background:linear-gradient(var(--violet),var(--violet)) 0 100%/0% 1px no-repeat;transition:background-size .5s var(--ease),color .3s}
-.mail a:hover{background-size:100% 1px;color:var(--violet)}
-.mail .k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
-.copy{flex:none;height:28px;padding:0 11px;border-radius:999px;border:1px solid var(--line-2);background:transparent;cursor:pointer;
-  font-family:var(--mono);font-size:10.5px;color:var(--ink-2);transition:background-color .3s,color .3s,border-color .3s}
+.hm a:hover{background-size:100% 1px;color:var(--violet)}
+.copy{flex:none;height:24px;padding:0 9px;border-radius:999px;border:1px solid var(--line-2);background:transparent;cursor:pointer;
+  font-family:var(--mono);font-size:10px;color:var(--ink-2);transition:background-color .3s,color .3s,border-color .3s}
 .copy:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .copy.done{background:var(--ok);border-color:var(--ok);color:#fff}
-.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-.links .btn{height:34px;padding:0 13px;font-size:12.5px;gap:7px}
-.foot{position:relative;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0;margin-top:clamp(64px,7vw,88px);border-top:1px solid var(--line);
-  font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.04em}
-.foot a:hover{color:var(--ink)}
-.sleeper{position:absolute;left:50%;top:-46px;width:90px;margin-left:-45px}
-.sleeper .sbody{transform-origin:44px 47px;animation:breathe 3.4s ease-in-out infinite}
-@keyframes breathe{50%{transform:scale(1.03,1.06)}}
-.zz{position:absolute;left:72px;top:-6px;width:30px;height:30px}
-.zz i{position:absolute;left:0;top:14px;font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ink-3);opacity:0;animation:zz 3.6s ease-out infinite}
-.zz i:nth-child(1){font-size:10px}.zz i:nth-child(2){font-size:12px;animation-delay:1.2s}.zz i:nth-child(3){font-size:15px;animation-delay:2.4s}
-@keyframes zz{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}100%{opacity:0;transform:translate(16px,-28px) rotate(-12deg)}}
-.outline{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,84px);line-height:.85;letter-spacing:-.035em;white-space:nowrap;text-align:center;
-  color:transparent;-webkit-text-stroke:1px var(--line-2);user-select:none;margin:0 0 -.04em;transition:color .8s var(--ease)}
-.outline:hover{color:color-mix(in srgb,var(--violet) 12%,transparent)}
-.outline em{font-style:italic}
 
 /* ───────── responsive ───────── */
 @media (max-width: 980px){
   .hero-grid{grid-template-columns:1fr}
   .portrait{justify-self:start;margin-top:70px}
-  .cards,.about,.fam,.contact-grid{grid-template-columns:1fr}
+  .cards,.about,.fam{grid-template-columns:1fr}
   .sec-head{grid-template-columns:1fr;gap:10px}
   .sec-sub{grid-column:1}
   .graph-box{min-height:460px}
@@ -542,7 +520,6 @@ em{font-style:italic}
     <a href="#research">Research</a>
     <a href="#about">About</a>
     <a href="#family">Family</a>
-    <a href="#contact">Contact</a>
   </nav>
   <div class="nav-right">
     <a class="pill" href="https://weiyang-huang.github.io/assets/pdf/CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a>
@@ -580,6 +557,10 @@ em{font-style:italic}
         <a class="btn icon-btn" href="https://www.linkedin.com/in/weiyang-huang-83a294361" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
         </a>
+      </div>
+      <div class="hero-mails">
+        <div class="hm"><span class="k">Personal</span><a href="mailto:weiyangh27@gmail.com">weiyangh27@gmail.com</a><button class="copy" type="button" data-copy="weiyangh27@gmail.com" aria-label="Copy personal email">copy</button></div>
+        <div class="hm"><span class="k">University</span><a href="mailto:wyh27@uw.edu">wyh27@uw.edu</a><button class="copy" type="button" data-copy="wyh27@uw.edu" aria-label="Copy university email">copy</button></div>
       </div>
     </div>
 
@@ -752,7 +733,7 @@ em{font-style:italic}
       </g></svg>
       <div class="seek">
         <p>Currently seeking research internships.<small>I’d be happy to connect with researchers and teams working on related topics.</small></p>
-        <a class="btn" href="#contact">Get in touch <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn" href="mailto:weiyangh27@gmail.com">Get in touch <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -886,54 +867,6 @@ em{font-style:italic}
   </div>
 </section>
 
-<!-- ═════════ CONTACT ═════════ -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div data-reveal>
-        <span class="sec-num">04 — Contact</span>
-        <h2 class="mega">Let’s <em>talk.</em></h2>
-        <p>I’m currently seeking research internship opportunities and would be happy to connect with researchers and teams working on structured reasoning, grounding, and multimodal evaluation.</p>
-      </div>
-      <div data-reveal style="--d:120ms">
-        <div class="mails">
-          <div class="mail">
-            <div><span class="k">Personal</span><a href="mailto:weiyangh27@gmail.com">weiyangh27@gmail.com</a></div>
-            <button class="copy" type="button" data-copy="weiyangh27@gmail.com">copy</button>
-          </div>
-          <div class="mail">
-            <div><span class="k">University</span><a href="mailto:wyh27@uw.edu">wyh27@uw.edu</a></div>
-            <button class="copy" type="button" data-copy="wyh27@uw.edu">copy</button>
-          </div>
-        </div>
-        <div class="links">
-          <a class="btn" href="https://github.com/Weiyang-Huang" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a>
-          <a class="btn" href="https://www.linkedin.com/in/weiyang-huang-83a294361" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
-          <a class="btn" href="https://weiyang-huang.github.io/assets/pdf/CV.pdf" target="_blank" rel="noopener">CV <span class="arr" aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-    <footer class="foot">
-      <!-- doodle: a cat napping on the footer line -->
-      <div class="sleeper doodle" aria-hidden="true">
-        <span class="zz"><i>z</i><i>z</i><i>Z</i></span>
-        <svg viewBox="0 0 92 50"><g filter="url(#boil)"><g class="sbody">
-          <path class="dl" d="M12 46 C18 51 42 51 58 46"/>
-          <path class="df" d="M10 47 C8 32 21 20 41 20 C61 20 77 28 79 42 C80 46 77 47 71 47 Z"/>
-          <path class="dl thin" d="M30 23 q3 5 0 10 M40 21 q3 5 0 10 M50 22 q3 5 0 10"/>
-          <path class="df" d="M57 33 C56 28 57 23 60 19 L64 24 C67 23 71 23 74 24 L78 19 C81 23 82 28 81 33 C80 39 76 42 69.5 42 C63 42 58 39 57 33 Z"/>
-          <path class="dl thin" d="M62.5 32 q2.2 1.8 4.4 0 M72.5 32 q2.2 1.8 4.4 0"/>
-          <path class="dk" d="M68 35.2 L71 35.2 L69.5 36.8 Z"/>
-          <ellipse class="blush" cx="61" cy="36.5" rx="2.2" ry="1.3"/><ellipse class="blush" cx="78" cy="36.5" rx="2.2" ry="1.3"/>
-        </g></g></svg>
-      </div>
-      <span>© 2026 Weiyang (Vivian) Huang · 黄薇洋</span>
-      <span>Seattle, WA · <span data-clock>—</span></span>
-      <a href="#top">Back to top ↑</a>
-    </footer>
-  </div>
-  <div class="outline" aria-hidden="true">Weiyang <em>Huang</em></div>
-</section>
 </main>
 
 <script>
@@ -989,7 +922,7 @@ em{font-style:italic}
   const secIO = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['top', 'research', 'about', 'family', 'contact'].forEach(id => secIO.observe(document.getElementById(id)));
+  ['top', 'research', 'about', 'family'].forEach(id => secIO.observe(document.getElementById(id)));
 
   /* ── cursor ring ── */
   if (fine && !reduce) {
